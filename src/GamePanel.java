@@ -7,18 +7,23 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class GamePanel extends JPanel implements KeyListener, ActionListener {
+    final int HEIGHT = 550, WIDTH = 525;
     public GamePanel(){
 
 
-        setSize(525,550);
+        setSize(WIDTH,HEIGHT);
         setFocusable(true);
         addKeyListener(this);
         setBackground(Color.BLACK);
     }
     public void actionPerformed(ActionEvent e){
-
+        repaint();
     }
 
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+
+    }
     public void keyTyped(KeyEvent e){
 
     }
